@@ -1,0 +1,69 @@
+*,
+*::after,
+*::before {
+  background-repeat: no-repeat;
+
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+font-family: krok, sans-serif;
+font-weight: 400;
+font-style: normal;
+color: white;
+background-color: black;
+}
+
+
+.loader {
+    position: relative;
+    margin-top: 30%;
+    width: 200px;
+    height: 200px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader span {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+
+    pointer-events: none;
+    animation:  animate 5s linear infinite;
+}
+
+.loader span:nth-child(1){
+border-radius: 35% 65% 24% 76% / 58% 63% 37% 42% ;    
+}
+
+.loader span:nth-child(2){
+    border-radius: 63% 37% 50% 50% / 72% 48% 52% 28% ;
+    animation-direction: reverse;
+}
+
+.loader span:nth-child(3){
+    border-radius: 43% 57% 33% 67% / 33% 53% 47% 67%  ;
+    animation-duration: 3s;
+}
+
+
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+   100%{
+        transform: rotate(360deg);
+    }
+
+}
